@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>X0R Labs — AI software, built to be the difference</title>
+    <meta
+      name="description"
+      content="X0R Labs designs and ships AI products and custom AI systems — and hands over the keys. Discovery sprints, four-week pilots, and a self-hosted agent backend you own."
+    />
+    <meta name="theme-color" content="#0B1220" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="X0R Labs — AI software, built to be the difference" />
+    <meta
+      property="og:description"
+      content="We build AI systems that take the hard part out of your work — then hand over the keys. Self-hosted, provider-agnostic, shipped in weeks."
+    />
+    <meta property="og:url" content="https://xor.ct.ws/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "X0R Labs",
+        "url": "https://xor.ct.ws/",
+        "email": "hello@x0rlabs.com",
+        "description": "AI software studio building AI products and custom AI systems.",
+        "sameAs": [
+          "https://github.com/X0R-labs",
+          "https://www.linkedin.com/company/x0r-labs"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="#top" aria-label="X0R Labs home">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="25" cy="32" r="13" fill="none" stroke="#6F8BFF" stroke-width="4" />
+            <circle cx="39" cy="32" r="13" fill="none" stroke="#2B50F0" stroke-width="4" />
+            <path d="M32 21.5a13 13 0 0 1 0 21" fill="none" stroke="#0B1220" stroke-width="7" />
+          </svg>
+          <span>X0R Labs</span>
+        </a>
+
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+
+        <nav class="nav" id="nav" aria-label="Main">
+          <a href="#product">Product</a>
+          <a href="#services">Services</a>
+          <a href="#process">How we work</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav__cta" href="#contact">Book a call</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ── hero ──────────────────────────────────────────────────────── -->
+      <section class="hero" id="top">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <span class="eyebrow eyebrow--light">AI software studio</span>
+            <h1>AI software, built to be <em>the difference.</em></h1>
+            <p class="hero__lead">
+              We design and ship AI systems that take the hard part out of your work — then
+              hand over the keys. No black boxes, no vendor lock-in, no six-month roadmap.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#contact">
+                Book a 20-minute call
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn--ghost" href="#services">See services &amp; pricing</a>
+            </div>
+
+            <div class="hero__note">
+              <span>Fixed-scope sprints</span>
+              <span>You own the code</span>
+              <span>Self-hosted by default</span>
+            </div>
+          </div>
+
+          <div class="terminal" role="img" aria-label="Example agent request and response">
+            <div class="terminal__bar">
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+              <span class="terminal__title">x0r core — agent run</span>
+            </div>
+            <div class="terminal__body">
+              <code><span class="t-prompt">$</span> <span class="t-cmd">curl -s $X0R/v1/agents/support/run</span>
+<span class="t-muted">    -d '{"input":"Refund after 45 days?"}'</span>
+
+<span class="t-muted">{</span>
+  <span class="t-key">"status"</span>: <span class="t-str">"succeeded"</span>,
+  <span class="t-key">"output"</span>: <span class="t-str">"Prorated at 50% up to day 60."</span>,
+  <span class="t-key">"steps"</span>: [<span class="t-str">"knowledge_search"</span>, <span class="t-str">"answer"</span>],
+  <span class="t-key">"prompt_tokens"</span>: <span class="t-num">412</span>,
+  <span class="t-key">"latency_ms"</span>: <span class="t-num">842</span>
+<span class="t-muted">}</span>
+
+<span class="t-ok">✓ every answer cites its source</span></code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── stats ─────────────────────────────────────────────────────── -->
+      <section class="stats" aria-label="Principles">
+        <div class="container">
+          <div class="stats__grid">
+            <div class="stats__item">
+              <strong>1 week</strong>
+              <span>to a working prototype</span>
+            </div>
+            <div class="stats__item">
+              <strong>100%</strong>
+              <span>of the code is yours</span>
+            </div>
+            <div class="stats__item">
+              <strong>Any model</strong>
+              <span>OpenAI, OpenRouter, local</span>
+            </div>
+            <div class="stats__item">
+              <strong>Fixed scope</strong>
+              <span>priced before we start</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── product ───────────────────────────────────────────────────── -->
+      <section class="section" id="product">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <span class="eyebrow">Our backbone</span>
+              <h2>X0R Core — the agent backend you own.</h2>
+            </div>
+            <p>
+              Every build runs on the same foundation: ingestion, retrieval, tool-calling
+              agents, quotas and evals. Open source, self-hosted, and pointed at whichever
+              model you trust this quarter.
+            </p>
+          </div>
+
+          <div class="product">
+            <div class="product__panel" role="img" aria-label="X0R Core quickstart terminal">
+              <code><span class="t-muted"># run it, no API key required</span>
+<span class="t-prompt">$</span> pip install -e ".[dev]"
+<span class="t-prompt">$</span> x0r seed
+
+  workspace  <span class="t-key">ws_9e83…</span>
+  agent      <span class="t-key">agt_453d…</span>
+  documents  <span class="t-num">4</span>   chunks <span class="t-num">4</span>
+
+<span class="t-prompt">$</span> x0r serve
+<span class="t-ok">INFO</span>  Uvicorn running on <span class="t-str">http://127.0.0.1:8000</span>
+<span class="t-ok">INFO</span>  docs at <span class="t-str">/docs</span></code>
+            </div>
+
+            <div>
+              <ul class="feature-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" stroke-linecap="round"/></svg>
+                  <div>
+                    <strong>Ingest anything text</strong>
+                    <p>Paragraph-aware chunking, embeddings, hybrid retrieval. SQLite for a demo, Postgres for production.</p>
+                  </div>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5"/></svg>
+                  <div>
+                    <strong>Agents that call your tools</strong>
+                    <p>A bounded tool loop with a registry you can extend. Add an order lookup in twenty lines.</p>
+                  </div>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9" stroke-linecap="round"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+                  <div>
+                    <strong>Metered, not guessed</strong>
+                    <p>API keys, workspace quotas, per-run token accounting. Quota checks happen before the model call.</p>
+                  </div>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <div>
+                    <strong>Evals, so quality doesn't drift</strong>
+                    <p>Golden-question suites with per-case scores and pass rates. Change a prompt, see the effect.</p>
+                  </div>
+                </li>
+              </ul>
+
+              <p style="margin-top: 1.4rem">
+                <a class="btn btn--outline" href="https://github.com/X0R-labs/core">
+                  View on GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── services ─────────────────────────────────────────────────── -->
+      <section class="section section--paper" id="services">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <span class="eyebrow">Services</span>
+              <h2>Three ways to start.</h2>
+            </div>
+            <p>
+              Priced before we begin, scoped in writing, and small enough that you can walk
+              away at the end of any stage with something useful.
+            </p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card__tag">Step one</div>
+              <h3>Discovery sprint</h3>
+              <p>Find the use case worth building — and prove it works before you commit.</p>
+              <ul>
+                <li>Data and workflow audit</li>
+                <li>Ranked use cases with effort and payoff</li>
+                <li>A working prototype on your data</li>
+                <li>Written build plan and fixed quote</li>
+              </ul>
+              <div class="card__foot">
+                <div class="price">$2,500</div>
+                <small>1 week</small>
+              </div>
+            </article>
+
+            <article class="card card--featured">
+              <div class="card__tag">Most common</div>
+              <h3>Pilot build</h3>
+              <p>One workflow, on your data, in production — with the guardrails that make it safe.</p>
+              <ul>
+                <li>Production integration and API</li>
+                <li>Retrieval over your documents</li>
+                <li>Evals, logging and cost controls</li>
+                <li>Deployed in your cloud, your keys</li>
+                <li>Two weeks of support after launch</li>
+              </ul>
+              <div class="card__foot">
+                <div class="price">$12,000</div>
+                <small>4 weeks</small>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__tag">Ongoing</div>
+              <h3>Care &amp; scale</h3>
+              <p>Keep it accurate, cheap and improving once real users touch it.</p>
+              <ul>
+                <li>Monitoring, eval runs, regression alerts</li>
+                <li>Prompt and model tuning</li>
+                <li>Monthly improvement release</li>
+                <li>Direct line to the engineer</li>
+              </ul>
+              <div class="card__foot">
+                <div class="price">$2,000<small>/mo</small></div>
+                <small>Cancel anytime</small>
+              </div>
+            </article>
+          </div>
+
+          <p style="margin: 1.6rem 0 0; color: var(--muted); font-size: 0.92rem">
+            Need something bigger, stranger, or already half-built? That's most of what we do —
+            <a href="mailto:hello@x0rlabs.com?subject=Project%20enquiry" style="color: var(--blue); font-weight: 600">tell us about it</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── process ──────────────────────────────────────────────────── -->
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <span class="eyebrow">How we work</span>
+              <h2>From idea to shipped in three moves.</h2>
+            </div>
+            <p>
+              Small releases you can see. No status reports describing work you can't inspect.
+            </p>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <h3>Prototype</h3>
+              <p>
+                We turn the idea into something you can click, in weeks rather than quarters.
+                Real data, real failure modes, early.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Build</h3>
+              <p>
+                We build the real thing with you, in small releases you can see as they land.
+                You get the repo and the keys.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Ship and improve</h3>
+              <p>
+                We launch, measure what people actually use, and keep improving the parts that
+                earn their place.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── practice ─────────────────────────────────────────────────── -->
+      <section class="section section--navy" id="practice">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <span class="eyebrow eyebrow--light">In practice</span>
+              <h2>What this usually looks like.</h2>
+            </div>
+            <p>
+              Three shapes we can build quickly because the hard parts already exist in Core.
+            </p>
+          </div>
+
+          <div class="usecases">
+            <article class="usecase">
+              <div class="usecase__kicker">Support</div>
+              <h3>Answers with citations</h3>
+              <p>
+                An assistant that reads your policies and tickets, answers customers, and
+                escalates the moment the policy says to. Every reply links its source.
+              </p>
+            </article>
+            <article class="usecase">
+              <div class="usecase__kicker">Operations</div>
+              <h3>Document intake, structured</h3>
+              <p>
+                Invoices, contracts and forms go in; validated JSON comes out, with a confidence
+                score and a human queue for the uncertain ones.
+              </p>
+            </article>
+            <article class="usecase">
+              <div class="usecase__kicker">Knowledge</div>
+              <h3>The answer machine</h3>
+              <p>
+                One place to ask questions across everything the company knows — with access
+                scoped per team and an audit trail of who asked what.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── faq ──────────────────────────────────────────────────────── -->
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <span class="eyebrow">Questions</span>
+              <h2>The things you're probably wondering.</h2>
+            </div>
+            <p>If yours isn't here, ask. We answer email the same day.</p>
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>Do we have to use your stack?</summary>
+              <p>
+                No. Core is our default because it removes four weeks of plumbing, but we work
+                in your stack when that's the right call — Python, TypeScript, Go, whatever your
+                team already runs.
+              </p>
+            </details>
+            <details>
+              <summary>Who owns the code and the data?</summary>
+              <p>
+                You do. Core is Apache-2.0 and deployed in your cloud with your keys. We don't
+                hold your documents, and there is no per-seat toll to keep your own product
+                running.
+              </p>
+            </details>
+            <details>
+              <summary>What if our data is a mess?</summary>
+              <p>
+                That's normal, and it's what the discovery sprint is for. We audit what exists,
+                show you what's usable now, and tell you what would need cleaning before it's
+                worth building on.
+              </p>
+            </details>
+            <details>
+              <summary>How fast can something be live?</summary>
+              <p>
+                A working prototype inside a week. A production pilot in about four weeks,
+                assuming we can get access to systems and a responsible person for sign-off.
+              </p>
+            </details>
+            <details>
+              <summary>Can you work with our existing tools?</summary>
+              <p>
+                Yes — via APIs, webhooks and scheduled jobs. If a system has no API, we'll say
+                so in the audit rather than pretend otherwise.
+              </p>
+            </details>
+            <details>
+              <summary>Will you sign an NDA?</summary>
+              <p>Yes. Send yours, or use ours. We can sign before the first call.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── contact ──────────────────────────────────────────────────── -->
+      <section class="section" id="contact" style="padding-top: 0">
+        <div class="container">
+          <div class="cta">
+            <div>
+              <span class="eyebrow eyebrow--light" style="margin-bottom: 1rem">Start here</span>
+              <h2>Let's build something.</h2>
+              <p>
+                Tell us the workflow that's costing you the most time. We'll reply within one
+                business day with an honest read on whether it's worth building — and what it
+                would take.
+              </p>
+            </div>
+            <div class="cta__actions">
+              <a
+                class="btn btn--primary"
+                href="mailto:hello@x0rlabs.com?subject=Project%20enquiry&body=Hi%20X0R%20Labs%2C%0A%0AWhat%20we%27re%20trying%20to%20do%3A%0A%0AWhat%20it%27s%20costing%20us%20today%3A%0A%0ATimeline%3A%0A"
+              >
+                hello@x0rlabs.com
+              </a>
+              <a
+                class="btn btn--ghost"
+                href="mailto:hello@x0rlabs.com?subject=Book%20a%2020-minute%20call&body=Hi%2C%0A%0AI%27d%20like%20to%20book%20a%20call.%20Here%20are%20a%20few%20times%20that%20work%3A%0A%0A"
+              >
+                Book a 20-minute call
+              </a>
+              <span class="cta__fine">No pitch deck. No discovery-call funnel.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <a class="site-footer__brand" href="#top">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#0B1220" />
+            <circle cx="25" cy="32" r="13" fill="none" stroke="#6F8BFF" stroke-width="4" />
+            <circle cx="39" cy="32" r="13" fill="none" stroke="#2B50F0" stroke-width="4" />
+            <path d="M32 21.5a13 13 0 0 1 0 21" fill="none" stroke="#0B1220" stroke-width="7" />
+          </svg>
+          <span>X0R Labs</span>
+        </a>
+
+        <nav class="site-footer__links" aria-label="Footer">
+          <a href="https://github.com/X0R-labs">GitHub</a>
+          <a href="https://www.linkedin.com/company/x0r-labs">LinkedIn</a>
+          <a href="mailto:hello@x0rlabs.com">Email</a>
+        </nav>
+
+        <p class="site-footer__legal">
+          © 2026 X0R Labs · XOR is the gate that returns true only when its inputs differ.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector(".nav__toggle");
+      const nav = document.getElementById("nav");
+      toggle?.addEventListener("click", () => {
+        const open = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+      nav?.addEventListener("click", (event) => {
+        if (event.target.tagName === "A") {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    </script>
+  </body>
+</html>
