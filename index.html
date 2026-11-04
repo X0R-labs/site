@@ -1,512 +1,86 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>X0R Labs — AI software, built to be the difference</title>
-    <meta
-      name="description"
-      content="X0R Labs designs and ships AI products and custom AI systems — and hands over the keys. Discovery sprints, four-week pilots, and a self-hosted agent backend you own."
-    />
-    <meta name="theme-color" content="#0B1220" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X0R Labs | Security engineering for AI systems</title>
+<meta name="description" content="Practical security reviews and hardening for AI agents, APIs and cloud deployments. Focused reviews from $350. Explore our open-source X0R Core backend.">
+<meta name="theme-color" content="#0B1220">
+<link rel="canonical" href="https://x0r-labs.github.io/site/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:title" content="X0R Labs | Security engineering for AI systems">
+<meta property="og:description" content="Understand what your AI agents can access. Find the gaps. Build the controls. Focused security reviews from $350.">
+<meta property="og:url" content="https://x0r-labs.github.io/site/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"X0R Labs","url":"https://x0r-labs.github.io/site/","description":"Security engineering for AI systems, APIs and cloud deployments.","sameAs":["https://github.com/X0R-labs","https://www.linkedin.com/company/x0r-labs/"]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container site-header__inner">
+<a class="brand" href="#top" aria-label="X0R Labs home"><img class="brand__mark" src="favicon.svg" alt="" width="40" height="40"><span>X0R Labs</span></a>
+<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">☰</button>
+<nav class="nav" id="nav" aria-label="Main"><a href="#services">Services &amp; pricing</a><a href="#product">Open source</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a class="nav__cta" href="#contact">Discuss a review</a></nav>
+</div></header>
+<main id="main">
+<section class="hero" id="top"><div class="container hero__grid">
+<div class="hero__copy"><span class="eyebrow eyebrow--light">AI · APIs · Cloud security</span>
+<h1>Your agents take action.<br><em>Know their boundaries.</em></h1>
+<p class="hero__lead">Security engineering for teams building with AI. We review what your agents can access, test the trust boundaries, and help implement practical controls.</p>
+<div class="hero__actions"><a class="btn btn--primary" href="#services">Start with a $350 review <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://github.com/X0R-labs/core">Explore the code</a></div>
+<div class="hero__note"><span>Fixed scope</span><span>Reproducible findings</span><span>Changes you can inspect</span></div>
+</div>
+<div class="terminal" aria-label="Example security review checklist"><div class="terminal__bar"><span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__title">a review starts with questions</span></div>
+<div class="terminal__body"><code><span class="t-muted">01 / IDENTITY</span>
+Who is asking the agent to act?
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="X0R Labs — AI software, built to be the difference" />
-    <meta
-      property="og:description"
-      content="We build AI systems that take the hard part out of your work — then hand over the keys. Self-hosted, provider-agnostic, shipped in weeks."
-    />
-    <meta property="og:url" content="https://xor.ct.ws/" />
-    <meta name="twitter:card" content="summary_large_image" />
+<span class="t-muted">02 / PERMISSIONS</span>
+Which tools and resources can it reach?
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+<span class="t-muted">03 / UNTRUSTED INPUT</span>
+Can retrieved content change its actions?
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "X0R Labs",
-        "url": "https://xor.ct.ws/",
-        "email": "hello@x0rlabs.com",
-        "description": "AI software studio building AI products and custom AI systems.",
-        "sameAs": [
-          "https://github.com/X0R-labs",
-          "https://www.linkedin.com/company/x0r-labs"
-        ]
-      }
-    </script>
-  </head>
+<span class="t-muted">04 / EVIDENCE</span>
+Can you reconstruct what happened?
 
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
-      <div class="container site-header__inner">
-        <a class="brand" href="#top" aria-label="X0R Labs home">
-          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="25" cy="32" r="13" fill="none" stroke="#6F8BFF" stroke-width="4" />
-            <circle cx="39" cy="32" r="13" fill="none" stroke="#2B50F0" stroke-width="4" />
-            <path d="M32 21.5a13 13 0 0 1 0 21" fill="none" stroke="#0B1220" stroke-width="7" />
-          </svg>
-          <span>X0R Labs</span>
-        </a>
-
-        <button
-          class="nav__toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="nav"
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
-
-        <nav class="nav" id="nav" aria-label="Main">
-          <a href="#product">Product</a>
-          <a href="#services">Services</a>
-          <a href="#process">How we work</a>
-          <a href="#faq">FAQ</a>
-          <a class="nav__cta" href="#contact">Book a call</a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main">
-      <!-- ── hero ──────────────────────────────────────────────────────── -->
-      <section class="hero" id="top">
-        <div class="container hero__grid">
-          <div class="hero__copy">
-            <span class="eyebrow eyebrow--light">AI software studio</span>
-            <h1>AI software, built to be <em>the difference.</em></h1>
-            <p class="hero__lead">
-              We design and ship AI systems that take the hard part out of your work — then
-              hand over the keys. No black boxes, no vendor lock-in, no six-month roadmap.
-            </p>
-
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="#contact">
-                Book a 20-minute call
-                <span aria-hidden="true">→</span>
-              </a>
-              <a class="btn btn--ghost" href="#services">See services &amp; pricing</a>
-            </div>
-
-            <div class="hero__note">
-              <span>Fixed-scope sprints</span>
-              <span>You own the code</span>
-              <span>Self-hosted by default</span>
-            </div>
-          </div>
-
-          <div class="terminal" role="img" aria-label="Example agent request and response">
-            <div class="terminal__bar">
-              <span class="terminal__dot"></span>
-              <span class="terminal__dot"></span>
-              <span class="terminal__dot"></span>
-              <span class="terminal__title">x0r core — agent run</span>
-            </div>
-            <div class="terminal__body">
-              <code><span class="t-prompt">$</span> <span class="t-cmd">curl -s $X0R/v1/agents/support/run</span>
-<span class="t-muted">    -d '{"input":"Refund after 45 days?"}'</span>
-
-<span class="t-muted">{</span>
-  <span class="t-key">"status"</span>: <span class="t-str">"succeeded"</span>,
-  <span class="t-key">"output"</span>: <span class="t-str">"Prorated at 50% up to day 60."</span>,
-  <span class="t-key">"steps"</span>: [<span class="t-str">"knowledge_search"</span>, <span class="t-str">"answer"</span>],
-  <span class="t-key">"prompt_tokens"</span>: <span class="t-num">412</span>,
-  <span class="t-key">"latency_ms"</span>: <span class="t-num">842</span>
-<span class="t-muted">}</span>
-
-<span class="t-ok">✓ every answer cites its source</span></code>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── stats ─────────────────────────────────────────────────────── -->
-      <section class="stats" aria-label="Principles">
-        <div class="container">
-          <div class="stats__grid">
-            <div class="stats__item">
-              <strong>1 week</strong>
-              <span>to a working prototype</span>
-            </div>
-            <div class="stats__item">
-              <strong>100%</strong>
-              <span>of the code is yours</span>
-            </div>
-            <div class="stats__item">
-              <strong>Any model</strong>
-              <span>OpenAI, OpenRouter, local</span>
-            </div>
-            <div class="stats__item">
-              <strong>Fixed scope</strong>
-              <span>priced before we start</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── product ───────────────────────────────────────────────────── -->
-      <section class="section" id="product">
-        <div class="container">
-          <div class="section__head">
-            <div>
-              <span class="eyebrow">Our backbone</span>
-              <h2>X0R Core — the agent backend you own.</h2>
-            </div>
-            <p>
-              Every build runs on the same foundation: ingestion, retrieval, tool-calling
-              agents, quotas and evals. Open source, self-hosted, and pointed at whichever
-              model you trust this quarter.
-            </p>
-          </div>
-
-          <div class="product">
-            <div class="product__panel" role="img" aria-label="X0R Core quickstart terminal">
-              <code><span class="t-muted"># run it, no API key required</span>
+<span class="t-ok">Deliverable: findings → fixes → retest</span></code></div></div>
+</div></section>
+<section class="stats" aria-label="Working principles"><div class="container"><div class="stats__grid"><div class="stats__item"><strong>Scope first</strong><span>Agree the boundaries before testing</span></div><div class="stats__item"><strong>Evidence</strong><span>Findings with reproducible examples</span></div><div class="stats__item"><strong>Practical fixes</strong><span>Prioritized for your deployment</span></div><div class="stats__item"><strong>Open source</strong><span>Inspect our engineering foundation</span></div></div></div></section>
+<section class="section section--paper" id="services"><div class="container">
+<div class="section__head"><div><span class="eyebrow">Start small</span><h2>A clear scope.<br>A lower barrier to start.</h2></div><p>Introductory pricing for focused engagements. Start with one workflow, understand the risks, then decide what to fix.</p></div>
+<div class="cards">
+<article class="card"><div class="card__tag">Understand the gaps</div><h3>Focused security review</h3><p>A review of one AI workflow or API integration, based on supplied code and a walkthrough.</p><ul><li>One workflow, up to three connected tools</li><li>Identity, secrets and trust-boundary review</li><li>Prioritized findings with supporting evidence</li><li>Written remediation plan and 30-minute readout</li></ul><div class="card__foot"><div class="price">$350</div><small>Fixed scope</small></div></article>
+<article class="card card--featured"><div class="card__tag">Implement the fixes</div><h3>Hardening sprint</h3><p>Turn agreed findings into concrete improvements in one existing deployment.</p><ul><li>One workflow and up to three agreed fixes</li><li>Permission, input or deployment controls</li><li>Regression tests for the changed behavior</li><li>Pull request, retest notes and handover</li></ul><div class="card__foot"><div class="price">From $1,000</div><small>Quoted after review</small></div></article>
+<article class="card"><div class="card__tag">Keep changes in check</div><h3>Security follow-up</h3><p>A small monthly allowance for reviewing changes to a previously assessed workflow.</p><ul><li>Up to two engineering hours per month</li><li>One scheduled review or retest</li><li>Brief written findings and next actions</li><li>Additional work quoted separately</li></ul><div class="card__foot"><div class="price">$250<small>/mo</small></div><small>Optional follow-up</small></div></article>
+</div>
+<p class="pricing-note">USD. Final scope, schedule and any applicable taxes are agreed in writing before work starts. Reviews require authorization and access to the agreed materials. Cloud and model costs, certification, compliance attestation, 24/7 monitoring and incident response are outside these packages.</p>
+</div></section>
+<section class="section" id="product"><div class="container">
+<div class="section__head"><div><span class="eyebrow">Inspect the foundation</span><h2>X0R Core.<br>Open code, explicit limits.</h2></div><p>An early-stage, self-hosted Python backend for experimenting with retrieval and tool-calling agents. It is our engineering foundation, with security work developed in the open.</p></div>
+<div class="product"><div class="product__panel"><code><span class="t-muted"># local demo · mock provider · no API key</span>
+<span class="t-prompt">$</span> git clone https://github.com/X0R-labs/core.git
+<span class="t-prompt">$</span> cd core
+<span class="t-prompt">$</span> python -m venv .venv
+<span class="t-prompt">$</span> source .venv/bin/activate
 <span class="t-prompt">$</span> pip install -e ".[dev]"
 <span class="t-prompt">$</span> x0r seed
-
-  workspace  <span class="t-key">ws_9e83…</span>
-  agent      <span class="t-key">agt_453d…</span>
-  documents  <span class="t-num">4</span>   chunks <span class="t-num">4</span>
-
 <span class="t-prompt">$</span> x0r serve
-<span class="t-ok">INFO</span>  Uvicorn running on <span class="t-str">http://127.0.0.1:8000</span>
-<span class="t-ok">INFO</span>  docs at <span class="t-str">/docs</span></code>
-            </div>
 
-            <div>
-              <ul class="feature-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" stroke-linecap="round"/></svg>
-                  <div>
-                    <strong>Ingest anything text</strong>
-                    <p>Paragraph-aware chunking, embeddings, hybrid retrieval. SQLite for a demo, Postgres for production.</p>
-                  </div>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5"/></svg>
-                  <div>
-                    <strong>Agents that call your tools</strong>
-                    <p>A bounded tool loop with a registry you can extend. Add an order lookup in twenty lines.</p>
-                  </div>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9" stroke-linecap="round"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
-                  <div>
-                    <strong>Metered, not guessed</strong>
-                    <p>API keys, workspace quotas, per-run token accounting. Quota checks happen before the model call.</p>
-                  </div>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <div>
-                    <strong>Evals, so quality doesn't drift</strong>
-                    <p>Golden-question suites with per-case scores and pass rates. Change a prompt, see the effect.</p>
-                  </div>
-                </li>
-              </ul>
-
-              <p style="margin-top: 1.4rem">
-                <a class="btn btn--outline" href="https://github.com/X0R-labs/core">
-                  View on GitHub <span aria-hidden="true">↗</span>
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── services ─────────────────────────────────────────────────── -->
-      <section class="section section--paper" id="services">
-        <div class="container">
-          <div class="section__head">
-            <div>
-              <span class="eyebrow">Services</span>
-              <h2>Three ways to start.</h2>
-            </div>
-            <p>
-              Priced before we begin, scoped in writing, and small enough that you can walk
-              away at the end of any stage with something useful.
-            </p>
-          </div>
-
-          <div class="cards">
-            <article class="card">
-              <div class="card__tag">Step one</div>
-              <h3>Discovery sprint</h3>
-              <p>Find the use case worth building — and prove it works before you commit.</p>
-              <ul>
-                <li>Data and workflow audit</li>
-                <li>Ranked use cases with effort and payoff</li>
-                <li>A working prototype on your data</li>
-                <li>Written build plan and fixed quote</li>
-              </ul>
-              <div class="card__foot">
-                <div class="price">$2,500</div>
-                <small>1 week</small>
-              </div>
-            </article>
-
-            <article class="card card--featured">
-              <div class="card__tag">Most common</div>
-              <h3>Pilot build</h3>
-              <p>One workflow, on your data, in production — with the guardrails that make it safe.</p>
-              <ul>
-                <li>Production integration and API</li>
-                <li>Retrieval over your documents</li>
-                <li>Evals, logging and cost controls</li>
-                <li>Deployed in your cloud, your keys</li>
-                <li>Two weeks of support after launch</li>
-              </ul>
-              <div class="card__foot">
-                <div class="price">$12,000</div>
-                <small>4 weeks</small>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__tag">Ongoing</div>
-              <h3>Care &amp; scale</h3>
-              <p>Keep it accurate, cheap and improving once real users touch it.</p>
-              <ul>
-                <li>Monitoring, eval runs, regression alerts</li>
-                <li>Prompt and model tuning</li>
-                <li>Monthly improvement release</li>
-                <li>Direct line to the engineer</li>
-              </ul>
-              <div class="card__foot">
-                <div class="price">$2,000<small>/mo</small></div>
-                <small>Cancel anytime</small>
-              </div>
-            </article>
-          </div>
-
-          <p style="margin: 1.6rem 0 0; color: var(--muted); font-size: 0.92rem">
-            Need something bigger, stranger, or already half-built? That's most of what we do —
-            <a href="mailto:hello@x0rlabs.com?subject=Project%20enquiry" style="color: var(--blue); font-weight: 600">tell us about it</a>.
-          </p>
-        </div>
-      </section>
-
-      <!-- ── process ──────────────────────────────────────────────────── -->
-      <section class="section" id="process">
-        <div class="container">
-          <div class="section__head">
-            <div>
-              <span class="eyebrow">How we work</span>
-              <h2>From idea to shipped in three moves.</h2>
-            </div>
-            <p>
-              Small releases you can see. No status reports describing work you can't inspect.
-            </p>
-          </div>
-
-          <div class="steps">
-            <div class="step">
-              <h3>Prototype</h3>
-              <p>
-                We turn the idea into something you can click, in weeks rather than quarters.
-                Real data, real failure modes, early.
-              </p>
-            </div>
-            <div class="step">
-              <h3>Build</h3>
-              <p>
-                We build the real thing with you, in small releases you can see as they land.
-                You get the repo and the keys.
-              </p>
-            </div>
-            <div class="step">
-              <h3>Ship and improve</h3>
-              <p>
-                We launch, measure what people actually use, and keep improving the parts that
-                earn their place.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── practice ─────────────────────────────────────────────────── -->
-      <section class="section section--navy" id="practice">
-        <div class="container">
-          <div class="section__head">
-            <div>
-              <span class="eyebrow eyebrow--light">In practice</span>
-              <h2>What this usually looks like.</h2>
-            </div>
-            <p>
-              Three shapes we can build quickly because the hard parts already exist in Core.
-            </p>
-          </div>
-
-          <div class="usecases">
-            <article class="usecase">
-              <div class="usecase__kicker">Support</div>
-              <h3>Answers with citations</h3>
-              <p>
-                An assistant that reads your policies and tickets, answers customers, and
-                escalates the moment the policy says to. Every reply links its source.
-              </p>
-            </article>
-            <article class="usecase">
-              <div class="usecase__kicker">Operations</div>
-              <h3>Document intake, structured</h3>
-              <p>
-                Invoices, contracts and forms go in; validated JSON comes out, with a confidence
-                score and a human queue for the uncertain ones.
-              </p>
-            </article>
-            <article class="usecase">
-              <div class="usecase__kicker">Knowledge</div>
-              <h3>The answer machine</h3>
-              <p>
-                One place to ask questions across everything the company knows — with access
-                scoped per team and an audit trail of who asked what.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── faq ──────────────────────────────────────────────────────── -->
-      <section class="section" id="faq">
-        <div class="container">
-          <div class="section__head">
-            <div>
-              <span class="eyebrow">Questions</span>
-              <h2>The things you're probably wondering.</h2>
-            </div>
-            <p>If yours isn't here, ask. We answer email the same day.</p>
-          </div>
-
-          <div class="faq">
-            <details>
-              <summary>Do we have to use your stack?</summary>
-              <p>
-                No. Core is our default because it removes four weeks of plumbing, but we work
-                in your stack when that's the right call — Python, TypeScript, Go, whatever your
-                team already runs.
-              </p>
-            </details>
-            <details>
-              <summary>Who owns the code and the data?</summary>
-              <p>
-                You do. Core is Apache-2.0 and deployed in your cloud with your keys. We don't
-                hold your documents, and there is no per-seat toll to keep your own product
-                running.
-              </p>
-            </details>
-            <details>
-              <summary>What if our data is a mess?</summary>
-              <p>
-                That's normal, and it's what the discovery sprint is for. We audit what exists,
-                show you what's usable now, and tell you what would need cleaning before it's
-                worth building on.
-              </p>
-            </details>
-            <details>
-              <summary>How fast can something be live?</summary>
-              <p>
-                A working prototype inside a week. A production pilot in about four weeks,
-                assuming we can get access to systems and a responsible person for sign-off.
-              </p>
-            </details>
-            <details>
-              <summary>Can you work with our existing tools?</summary>
-              <p>
-                Yes — via APIs, webhooks and scheduled jobs. If a system has no API, we'll say
-                so in the audit rather than pretend otherwise.
-              </p>
-            </details>
-            <details>
-              <summary>Will you sign an NDA?</summary>
-              <p>Yes. Send yours, or use ours. We can sign before the first call.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── contact ──────────────────────────────────────────────────── -->
-      <section class="section" id="contact" style="padding-top: 0">
-        <div class="container">
-          <div class="cta">
-            <div>
-              <span class="eyebrow eyebrow--light" style="margin-bottom: 1rem">Start here</span>
-              <h2>Let's build something.</h2>
-              <p>
-                Tell us the workflow that's costing you the most time. We'll reply within one
-                business day with an honest read on whether it's worth building — and what it
-                would take.
-              </p>
-            </div>
-            <div class="cta__actions">
-              <a
-                class="btn btn--primary"
-                href="mailto:hello@x0rlabs.com?subject=Project%20enquiry&body=Hi%20X0R%20Labs%2C%0A%0AWhat%20we%27re%20trying%20to%20do%3A%0A%0AWhat%20it%27s%20costing%20us%20today%3A%0A%0ATimeline%3A%0A"
-              >
-                hello@x0rlabs.com
-              </a>
-              <a
-                class="btn btn--ghost"
-                href="mailto:hello@x0rlabs.com?subject=Book%20a%2020-minute%20call&body=Hi%2C%0A%0AI%27d%20like%20to%20book%20a%20call.%20Here%20are%20a%20few%20times%20that%20work%3A%0A%0A"
-              >
-                Book a 20-minute call
-              </a>
-              <span class="cta__fine">No pitch deck. No discovery-call funnel.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container site-footer__inner">
-        <a class="site-footer__brand" href="#top">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <rect width="64" height="64" rx="14" fill="#0B1220" />
-            <circle cx="25" cy="32" r="13" fill="none" stroke="#6F8BFF" stroke-width="4" />
-            <circle cx="39" cy="32" r="13" fill="none" stroke="#2B50F0" stroke-width="4" />
-            <path d="M32 21.5a13 13 0 0 1 0 21" fill="none" stroke="#0B1220" stroke-width="7" />
-          </svg>
-          <span>X0R Labs</span>
-        </a>
-
-        <nav class="site-footer__links" aria-label="Footer">
-          <a href="https://github.com/X0R-labs">GitHub</a>
-          <a href="https://www.linkedin.com/company/x0r-labs">LinkedIn</a>
-          <a href="mailto:hello@x0rlabs.com">Email</a>
-        </nav>
-
-        <p class="site-footer__legal">
-          © 2026 X0R Labs · XOR is the gate that returns true only when its inputs differ.
-        </p>
-      </div>
-    </footer>
-
-    <script>
-      const toggle = document.querySelector(".nav__toggle");
-      const nav = document.getElementById("nav");
-      toggle?.addEventListener("click", () => {
-        const open = nav.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", String(open));
-      });
-      nav?.addEventListener("click", (event) => {
-        if (event.target.tagName === "A") {
-          nav.classList.remove("is-open");
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      });
-    </script>
-  </body>
-</html>
+<span class="t-muted">Mock output demonstrates the workflow.</span>
+<span class="t-muted">It does not measure real-model security.</span></code></div>
+<div><ul class="feature-list"><li><div><strong>Available today</strong><p>Text ingestion, retrieval, workspace API keys, bounded agent loops, usage accounting and basic evaluation suites.</p></div></li><li><div><strong>Security work in progress</strong><p>Tool authorization, safer execution evidence, stricter resource controls and adversarial regression tests are the next development priorities.</p></div></li><li><div><strong>Know the limits</strong><p>Core is experimental. A passing test suite does not certify a deployment as secure. Review the code and deployment assumptions before using sensitive data.</p></div></li></ul><p class="product-links"><a class="btn btn--outline" href="https://github.com/X0R-labs/core">Read the code <span aria-hidden="true">↗</span></a> <a href="https://github.com/X0R-labs/core/actions">View CI</a></p></div></div>
+</div></section>
+<section class="section section--navy" id="practice"><div class="container"><div class="section__head"><div><span class="eyebrow eyebrow--light">What we examine</span><h2>Follow the action.<br>Check every boundary.</h2></div><p>Begin with the controls that determine what an agent or API can actually do.</p></div>
+<div class="usecases"><article class="usecase"><div class="usecase__kicker">Agent permissions</div><h3>Who can do what?</h3><p>Review tool permissions, caller identity, workspace boundaries and the arguments sent to sensitive operations.</p></article><article class="usecase"><div class="usecase__kicker">Adversarial behavior</div><h3>What happens under pressure?</h3><p>Use scoped test cases for malicious retrieved content, unauthorized actions and resource exhaustion. Record both failures and limitations.</p></article><article class="usecase"><div class="usecase__kicker">Deployment &amp; evidence</div><h3>What can you verify?</h3><p>Examine secrets, network access, API exposure and execution logs. Keep useful investigation evidence without retaining unnecessary sensitive data.</p></article></div>
+</div></section>
+<section class="section" id="process"><div class="container"><div class="section__head"><div><span class="eyebrow">How it works</span><h2>Understand. Fix. Verify.</h2></div><p>Work directly with a founder-led engineering practice. Every engagement starts with a defined system and a written scope.</p></div><div class="steps"><div class="step"><h3>Map the workflow</h3><p>Agree what is in scope, who owns the system, what data it handles and which actions matter.</p></div><div class="step"><h3>Review and reproduce</h3><p>Inspect the implementation and test agreed scenarios. Separate demonstrated findings from risks that still need validation.</p></div><div class="step"><h3>Handover and retest</h3><p>Receive prioritized fixes. If you choose a hardening sprint, inspect the changes and the tests that verify them.</p></div></div></div></section>
+<section class="section section--paper" id="faq"><div class="container"><div class="section__head"><div><span class="eyebrow">Before we start</span><h2>A few useful answers.</h2></div><p>Clear expectations make a small engagement useful.</p></div><div class="faq"><details><summary>Do we need to use X0R Core?</summary><p>No. The service can assess your existing agent, API or cloud workflow. Core is an open-source engineering project, not a required platform.</p></details><details><summary>What does the $350 review include?</summary><p>One workflow with up to three connected tools, a code and architecture review, prioritized findings, a remediation plan and a 30-minute readout. Implementation and broad penetration testing are separately scoped.</p></details><details><summary>Can you guarantee an agent is secure?</summary><p>No. We report the controls and scenarios examined, the findings reproduced and the limits of the assessment. A review is not certification or a guarantee against all attacks.</p></details><details><summary>Do you need production data or credentials?</summary><p>Prefer synthetic or redacted data and a test environment. We agree access before the engagement; do not send passwords, API keys or private customer records in an initial message.</p></details><details><summary>Can we keep our existing cloud and model provider?</summary><p>Yes. We start with the system you already operate and scope improvements around its actual requirements.</p></details></div></div></section>
+<section class="section" id="contact"><div class="container"><div class="cta"><div><span class="eyebrow eyebrow--light">Start with one workflow</span><h2>What can your agent access?</h2><p>Tell us what you are building, which tools it calls, and where you are unsure about permissions or data exposure. We will agree a useful first scope before any paid work.</p></div><div class="cta__actions"><a class="btn btn--primary" href="https://www.linkedin.com/company/x0r-labs/">Discuss a review on LinkedIn <span aria-hidden="true">↗</span></a><a class="btn btn--ghost" href="https://github.com/X0R-labs/core">Explore X0R Core</a><span class="cta__fine">Secure by design. Intelligent by nature.</span></div></div></div></section>
+</main>
+<footer class="site-footer"><div class="container site-footer__inner"><a class="site-footer__brand" href="#top"><img src="favicon.svg" width="32" height="32" alt=""><span>X0R Labs</span></a><nav class="site-footer__links" aria-label="Footer"><a href="https://github.com/X0R-labs">GitHub</a><a href="https://www.linkedin.com/company/x0r-labs/">LinkedIn</a><a href="#services">Pricing</a></nav><p class="site-footer__legal">© 2026 X0R Labs · Security engineering for AI systems</p></div></footer>
+<script>
+const toggle = document.querySelector('.nav__toggle');
+const nav = document.getElementById('nav');
+toggle.addEventListener('click', () => { const open = nav.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', String(open)); });
+nav.addEventListener('click', event => { if (event.target.closest('a')) { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); } });
+</script>
+</body></html>
