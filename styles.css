@@ -670,7 +670,7 @@ h3 {
 }
 
 .card--featured::before {
-  content: "Most common";
+  content: "Hardening sprint";
   position: absolute;
   top: -11px;
   left: 1.6rem;
