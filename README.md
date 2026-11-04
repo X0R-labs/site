@@ -15,6 +15,9 @@ python3 -m http.server 8088
 # http://localhost:8088
 ```
 
+Currently deployed at <https://x0r-labs.github.io/site/> via GitHub Pages. Treat that as a
+staging URL — send prospects to `x0rlabs.com` once it's connected.
+
 ## Before you publish
 
 1. **Change the prices** in `index.html` if the numbers in `gtm/offer.md` differ.
