@@ -848,8 +848,14 @@ h3 {
   z-index: 1;
 }
 
+.cta > * {
+  min-width: 0;
+}
+
 .cta__actions .btn {
   width: 100%;
+  white-space: normal;
+  text-align: center;
 }
 
 .cta__fine {
