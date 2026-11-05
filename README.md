@@ -1,77 +1,59 @@
-# x0r-labs site
+# X0R Labs website
 
-Static site — no build step, no framework. Three files plus a font from Google Fonts.
+Static HTML, CSS and small JavaScript. No build step, external fonts, analytics,
+forms, backend or runtime package dependencies. Hosted at
+<https://x0r-labs.github.io/site/> by GitHub Pages from `main` / repository root.
+No custom domain is configured by this project.
 
-```
-index.html     the page
-styles.css     all styling (design tokens at the top)
-favicon.svg    the XOR mark
-```
-
-Preview locally:
+## Preview
 
 ```bash
-python3 -m http.server 8088
-# http://localhost:8088
+python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Currently deployed at <https://x0r-labs.github.io/site/> via GitHub Pages. Treat that as a
-staging URL — send prospects to `x0rlabs.com` once it's connected.
+Open <http://127.0.0.1:8765/>. Assets are relative to this page so the same files
+work under `/site/`. Canonical, Open Graph and structured URLs use the public
+Pages address. Preserve the original `favicon.svg` logo proportions and the
+existing `social-preview.png`.
 
-## Before you publish
+## Design and behavior
 
-1. **Change the prices** in `index.html` if the numbers in `gtm/offer.md` differ.
-2. **Replace the booking links.** Both CTAs are `mailto:` with a prefilled body. Swap the
-   second one for a Cal.com / Calendly link when you have one:
+See [design direction](docs/DESIGN.md). The hero request path is a concept
+illustration with three brief animation cycles, a pause control, offscreen/tab
+visibility pausing and reduced-motion support. The diagram is static without JS.
 
-   ```html
-   <a class="btn btn--ghost" href="https://cal.com/x0rlabs/20min">Book a 20-minute call</a>
-   ```
+The native radio controls illustrate pinned Core mock-test results; they do not
+call a backend. A polite status region announces result changes. Without JS,
+navigation, FAQs, contact and source links remain usable, the illustration is
+static, and both outcomes are explained in a noscript fallback. No visitor data
+is collected or stored.
 
-3. **Update the GitHub link** once the `core` repo is public.
-4. **Set the canonical URL** in the `<link rel="canonical">` tag (add one) and in the
-   JSON-LD `url` field if the domain changes.
+Public copy must keep experimental/mock evidence separate from client work and
+production assurances. Keep pending commercial decisions and private GTM
+material out of this repository. Use the verified LinkedIn contact route.
 
-## Deploying
+## Verification
 
-### Recommended: Cloudflare Pages (free, no interstitial)
+Use a separate Python environment for QA tooling (Python 3.11+):
 
-1. Push this folder to `github.com/X0R-labs/site`.
-2. Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git.
-3. Framework preset: **None**. Build command: empty. Output directory: `/`.
-4. Add the custom domain `x0rlabs.com` and `www`.
-
-You get HTTPS, a global CDN, and no anti-bot challenge page. This matters: the current
-`xor.ct.ws` hosting puts a JavaScript challenge in front of every first-time visitor, and
-some corporate mail scanners will never pass it.
-
-### InfinityFree (current host)
-
-Upload `index.html`, `styles.css` and `favicon.svg` into `htdocs/` via the file manager or
-FTP. Keep the same filenames. Clear the cache in the control panel after uploading.
-
-### Netlify drop
-
-Drag the folder onto <https://app.netlify.com/drop>. Done in ten seconds.
-
-## Editing the design
-
-All colours, radii and the max width are CSS custom properties at the top of `styles.css`:
-
-```css
-:root {
-  --navy: #0b1220;
-  --blue: #2b50f0;
-  --sky:  #6f8bff;
-  --max:  1140px;
-}
+```bash
+python3 -m venv /tmp/x0r-site-qa-venv
+/tmp/x0r-site-qa-venv/bin/python -m pip install playwright==1.64.1
+PLAYWRIGHT_BROWSERS_PATH=/tmp/x0r-playwright /tmp/x0r-site-qa-venv/bin/python -m playwright install chromium
+X0R_QA_URL=http://127.0.0.1:8765/ PLAYWRIGHT_BROWSERS_PATH=/tmp/x0r-playwright /tmp/x0r-site-qa-venv/bin/python qa/check_site.py
 ```
 
-Typography is Schibsted Grotesk, loaded from Google Fonts. If you want zero third-party
-requests, download the woff2 files and self-host them — it will also load faster.
+The URL must end with `/`. `QA_OUT` selects a screenshot/JSON output directory;
+default `/tmp/x0r-site-qa`. `AXE_PATH` optionally points to a locally installed
+axe-core script for WCAG 2.2 AA automated checks. CI uses axe-core 4.14.0.
+QA tools are development-only; the website does not load them.
 
-## Accessibility
+The checks extend the original local launch utility: 320, 375, 390, 430, 768 and
+1280px, overflow/contact clipping, assets/anchors, navigation, FAQ, both demo
+states, keyboard operation, no-JS, reduced motion, pause behavior, console
+errors and browser performance entries. The hidden-tab handler is checked
+with a synthetic visibility event, not an OS lifecycle test. Raw timings are
+single unthrottled browser observations, not Lighthouse scores or field metrics.
 
-The page passes Lighthouse at 100 for accessibility, best practices and SEO. Keep it that
-way: check contrast when you change colours, keep one `<h1>`, and never remove the
-`aria-label`s on icon-only links.
+See [verification evidence](docs/QA.md) for actual observations and screenshots.
+Physical iPhone Safari and a screen-reader audit remain separate checks.
