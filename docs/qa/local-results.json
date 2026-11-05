@@ -1,0 +1,420 @@
+[
+  {
+    "width": 320,
+    "documentWidth": 320,
+    "overflow": [],
+    "missingAnchors": 0,
+    "unloadedImages": 0,
+    "clippedContact": 0,
+    "performance": {
+      "domContentLoadedMs": 66,
+      "loadMs": 301.8999999985099,
+      "lcpMs": 324,
+      "cls": 0,
+      "longTasks": [
+        56,
+        181
+      ],
+      "transferredBytes": 65576,
+      "resourceCount": 3,
+      "resourceOrigins": [
+        "http://127.0.0.1:8765"
+      ]
+    },
+    "axe": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".nav__toggle > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "text[y=\"143\"]"
+            ],
+            [
+              "text[y=\"161\"]"
+            ],
+            [
+              "text[x=\"14\"]"
+            ],
+            [
+              "text[y=\"441\"]"
+            ],
+            [
+              "text[y=\"460\"]"
+            ],
+            [
+              ".down-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".path-request > code"
+            ],
+            [
+              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "#decision-reason"
+            ],
+            [
+              ".report-limit > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": 30
+    },
+    "consoleErrors": [],
+    "sourceURL": "http://127.0.0.1:8765/",
+    "requestedWidth": 320,
+    "keyboard": "passed",
+    "states": "passed",
+    "navigation": "passed",
+    "faq": "passed"
+  },
+  {
+    "width": 375,
+    "documentWidth": 375,
+    "overflow": [],
+    "missingAnchors": 0,
+    "unloadedImages": 0,
+    "clippedContact": 0,
+    "performance": {
+      "domContentLoadedMs": 66.30000000447035,
+      "loadMs": 99.60000000149012,
+      "lcpMs": 216,
+      "cls": 0,
+      "longTasks": [
+        85
+      ],
+      "transferredBytes": 65576,
+      "resourceCount": 3,
+      "resourceOrigins": [
+        "http://127.0.0.1:8765"
+      ]
+    },
+    "axe": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".nav__toggle > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "text[y=\"143\"]"
+            ],
+            [
+              "text[y=\"161\"]"
+            ],
+            [
+              "text[x=\"14\"]"
+            ],
+            [
+              "text[y=\"441\"]"
+            ],
+            [
+              "text[y=\"460\"]"
+            ],
+            [
+              ".down-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".report-limit > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": 30
+    },
+    "consoleErrors": [],
+    "sourceURL": "http://127.0.0.1:8765/",
+    "requestedWidth": 375,
+    "keyboard": "passed",
+    "states": "passed",
+    "navigation": "passed",
+    "faq": "passed"
+  },
+  {
+    "width": 390,
+    "documentWidth": 390,
+    "overflow": [],
+    "missingAnchors": 0,
+    "unloadedImages": 0,
+    "clippedContact": 0,
+    "performance": {
+      "domContentLoadedMs": 59,
+      "loadMs": 90.39999999850988,
+      "lcpMs": 216,
+      "cls": 0,
+      "longTasks": [
+        98
+      ],
+      "transferredBytes": 65576,
+      "resourceCount": 3,
+      "resourceOrigins": [
+        "http://127.0.0.1:8765"
+      ]
+    },
+    "axe": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".nav__toggle > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "text[y=\"143\"]"
+            ],
+            [
+              "text[y=\"161\"]"
+            ],
+            [
+              "text[x=\"14\"]"
+            ],
+            [
+              "text[y=\"441\"]"
+            ],
+            [
+              "text[y=\"460\"]"
+            ],
+            [
+              ".down-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".report-limit > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": 30
+    },
+    "consoleErrors": [],
+    "sourceURL": "http://127.0.0.1:8765/",
+    "requestedWidth": 390,
+    "keyboard": "passed",
+    "states": "passed",
+    "navigation": "passed",
+    "faq": "passed"
+  },
+  {
+    "width": 430,
+    "documentWidth": 430,
+    "overflow": [],
+    "missingAnchors": 0,
+    "unloadedImages": 0,
+    "clippedContact": 0,
+    "performance": {
+      "domContentLoadedMs": 75.5,
+      "loadMs": 111.69999999552965,
+      "lcpMs": 252,
+      "cls": 0,
+      "longTasks": [
+        106
+      ],
+      "transferredBytes": 65576,
+      "resourceCount": 3,
+      "resourceOrigins": [
+        "http://127.0.0.1:8765"
+      ]
+    },
+    "axe": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".nav__toggle > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "text[y=\"143\"]"
+            ],
+            [
+              "text[y=\"161\"]"
+            ],
+            [
+              "text[x=\"14\"]"
+            ],
+            [
+              "text[y=\"441\"]"
+            ],
+            [
+              "text[y=\"460\"]"
+            ],
+            [
+              ".down-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".report-limit > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": 30
+    },
+    "consoleErrors": [],
+    "sourceURL": "http://127.0.0.1:8765/",
+    "requestedWidth": 430,
+    "keyboard": "passed",
+    "states": "passed",
+    "navigation": "passed",
+    "faq": "passed"
+  },
+  {
+    "width": 768,
+    "documentWidth": 768,
+    "overflow": [],
+    "missingAnchors": 0,
+    "unloadedImages": 0,
+    "clippedContact": 0,
+    "performance": {
+      "domContentLoadedMs": 48.600000001490116,
+      "loadMs": 85,
+      "lcpMs": 200,
+      "cls": 0,
+      "longTasks": [
+        84
+      ],
+      "transferredBytes": 65576,
+      "resourceCount": 3,
+      "resourceOrigins": [
+        "http://127.0.0.1:8765"
+      ]
+    },
+    "axe": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".nav__toggle > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "text[y=\"143\"]"
+            ],
+            [
+              "text[y=\"161\"]"
+            ],
+            [
+              "text[x=\"14\"]"
+            ],
+            [
+              "text[y=\"441\"]"
+            ],
+            [
+              "text[y=\"460\"]"
+            ],
+            [
+              ".down-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".path-request > .step-number"
+            ],
+            [
+              ".path-policy > .step-number"
+            ],
+            [
+              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".report-limit > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": 30
+    },
+    "consoleErrors": [],
+    "sourceURL": "http://127.0.0.1:8765/",
+    "requestedWidth": 768,
+    "keyboard": "passed",
+    "states": "passed",
+    "navigation": "passed",
+    "faq": "passed"
+  },
+  {
+    "width": 1280,
+    "documentWidth": 1280,
+    "overflow": [],
+    "missingAnchors": 0,
+    "unloadedImages": 0,
+    "clippedContact": 0,
+    "performance": {
+      "domContentLoadedMs": 51.900000005960464,
+      "loadMs": 86.70000000298023,
+      "lcpMs": 220,
+      "cls": 0,
+      "longTasks": [
+        90
+      ],
+      "transferredBytes": 65576,
+      "resourceCount": 3,
+      "resourceOrigins": [
+        "http://127.0.0.1:8765"
+      ]
+    },
+    "axe": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "text[y=\"143\"]"
+            ],
+            [
+              "text[y=\"161\"]"
+            ],
+            [
+              "text[x=\"14\"]"
+            ],
+            [
+              "text[y=\"441\"]"
+            ],
+            [
+              "text[y=\"460\"]"
+            ],
+            [
+              ".down-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".path-request > .step-number"
+            ],
+            [
+              ".path-policy > .step-number"
+            ],
+            [
+              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".report-limit > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": 30
+    },
+    "consoleErrors": [],
+    "sourceURL": "http://127.0.0.1:8765/",
+    "requestedWidth": 1280,
+    "keyboard": "passed",
+    "states": "passed",
+    "navigation": "passed",
+    "faq": "passed"
+  }
+]

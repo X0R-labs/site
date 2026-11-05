@@ -1,0 +1,8 @@
+{
+  "noJavaScript": "passed",
+  "reducedMotion": "passed",
+  "motionPause": "passed",
+  "offscreenPause": "passed",
+  "simulatedHiddenTabPause": "passed",
+  "physicalSafari": "not tested"
+}
