@@ -90,10 +90,10 @@
           <div class="hero-grid">
             <div class="hero-copy">
               <h1 id="hero-heading">
-                Agents act.<br /><span>Boundaries<br />matter.</span>
+                Agent access.<br /><span>Under review.</span>
               </h1>
               <p class="hero-lead">
-                Your agent can call a tool.<br />Should that action execute?
+                Know what can execute.<br />Examine where it stops.
               </p>
               <p class="hero-support">
                 We review and harden existing AI workflows for teams connecting
@@ -101,7 +101,8 @@
               </p>
               <div class="hero-actions">
                 <a class="btn btn-primary" href="#services"
-                  >Explore the $350 review <span aria-hidden="true">↗</span></a
+                  >Review your workflow · $350
+                  <span aria-hidden="true">↗</span></a
                 ><a
                   class="text-link"
                   href="https://github.com/X0R-labs/core/blob/8538e2dbb331ce0844837f81959eb3917ec60710/docs/SAMPLE-SECURITY-REVIEW.md"
@@ -109,160 +110,58 @@
                 >
               </div>
             </div>
-            <figure class="gate-figure motion" aria-labelledby="gate-caption">
+            <figure
+              class="gate-figure system-map motion"
+              aria-labelledby="gate-caption"
+            >
               <div class="figure-top mono">
-                <span>REQUEST → DECISION → ACTION</span><span>FIG. 01</span>
+                <span>BEFORE AN ACTION EXECUTES</span><span>FIG. 01</span>
               </div>
-              <svg
-                class="gate-art"
-                viewBox="0 0 540 530"
-                role="img"
-                aria-label="A synthetic agent request meets an operator policy boundary before reaching the tool handler."
-              >
-                <defs>
-                  <pattern
-                    id="grid"
-                    width="30"
-                    height="30"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <path
-                      d="M30 0H0V30"
-                      fill="none"
-                      stroke="#17243b"
-                      stroke-width=".7"
-                    />
-                  </pattern>
-                  <linearGradient id="gate-blue" x1="0" x2="1">
-                    <stop stop-color="#294eff" />
-                    <stop offset="1" stop-color="#5485ff" />
-                  </linearGradient>
-                </defs>
-                <rect width="540" height="530" fill="url(#grid)" />
-                <g fill="none">
-                  <circle cx="300" cy="242" r="172" stroke="#1b2d4c" />
-                  <circle
-                    cx="300"
-                    cy="242"
-                    r="145"
-                    stroke="#213b63"
-                    stroke-dasharray="2 10"
-                  />
-                  <path
-                    d="M300 40V444M98 242H502"
-                    stroke="#23324d"
-                    stroke-dasharray="4 8"
-                  />
-                </g>
-                <path
-                  d="M10 325H158L225 258"
-                  class="input-path"
-                  fill="none"
-                  stroke="#75e1ee"
-                  stroke-width="2"
-                />
-                <path
-                  d="M363 205L421 147H530"
-                  fill="none"
-                  stroke="#34486c"
-                  stroke-width="2"
-                  stroke-dasharray="5 7"
-                />
-                <path
-                  d="M223 103L362 56V340L223 387Z"
-                  fill="#101f42"
-                  stroke="#2e4d80"
-                />
-                <path d="M245 117L339 86V324L245 356Z" fill="url(#gate-blue)" />
-                <path
-                  d="M262 132L322 112V308L262 328Z"
-                  fill="#0a1429"
-                  stroke="#7095ff"
-                />
-                <path d="M275 188L309 177V244L275 255Z" fill="#3057ff" />
-                <path d="M277 267L308 257" stroke="#7edbe5" stroke-width="3" />
-                <g class="request-packet">
-                  <rect
-                    x="70"
-                    y="311"
-                    width="28"
-                    height="28"
-                    rx="2"
-                    fill="#80e5ef"
-                  />
-                  <path
-                    d="M77 325H90M85 320L90 325L85 330"
-                    fill="none"
-                    stroke="#09101e"
-                    stroke-width="2"
-                  />
-                </g>
-                <circle cx="225" cy="258" r="5" fill="#7be5ef" />
-                <rect
-                  x="410"
-                  y="120"
-                  width="100"
-                  height="54"
-                  rx="3"
-                  fill="#101a2b"
-                  stroke="#334663"
-                />
-                <text
-                  x="460"
-                  y="143"
-                  fill="#a4b5d0"
-                  text-anchor="middle"
-                  font-size="11"
-                  font-family="monospace"
-                >
-                  HANDLER
-                </text>
-                <text
-                  x="460"
-                  y="161"
-                  fill="#dbe7ff"
-                  text-anchor="middle"
-                  font-size="11"
-                  font-family="monospace"
-                >
-                  not entered
-                </text>
-                <text
-                  x="14"
-                  y="367"
-                  fill="#a9bdd8"
-                  font-size="12"
-                  font-family="monospace"
-                >
-                  AGENT REQUEST
-                </text>
-                <path d="M297 384V420H394" fill="none" stroke="#3c63a5" />
-                <text
-                  x="298"
-                  y="441"
-                  fill="#8ea9ff"
-                  font-size="12"
-                  font-family="monospace"
-                >
-                  OPERATOR POLICY
-                </text>
-                <text
-                  x="298"
-                  y="460"
-                  fill="#e7edff"
-                  font-size="13"
-                  font-family="monospace"
-                >
-                  Decide before dispatch.
-                </text>
-                <g stroke="#57739e" stroke-width="1">
-                  <path
-                    d="M8 8H25M8 8V25M532 8H515M532 8V25M8 522H25M8 522V505M532 522H515M532 522V505"
-                  />
-                </g>
-              </svg>
+              <div class="map-canvas">
+                <div class="map-request">
+                  <span class="map-icon" aria-hidden="true"
+                    ><svg viewBox="0 0 32 32">
+                      <path d="M6 7h20v18H6zM11 13h10M11 18h6" /></svg
+                  ></span>
+                  <div>
+                    <span class="small-label">SYNTHETIC AGENT REQUEST</span
+                    ><code>knowledge_search</code>
+                  </div>
+                  <span class="map-step" aria-hidden="true">01</span>
+                </div>
+                <div class="map-connection" aria-hidden="true">
+                  <span class="request-packet"></span>
+                </div>
+                <div class="map-policy">
+                  <div class="map-policy-top">
+                    <span class="small-label">02 / CHECK BEFORE DISPATCH</span
+                    ><span class="map-cross" aria-hidden="true">+</span>
+                  </div>
+                  <h3>Execution policy</h3>
+                  <ul aria-label="Policy checks">
+                    <li>Agent grant</li>
+                    <li>Operator grant</li>
+                    <li>Arguments</li>
+                  </ul>
+                </div>
+                <div class="map-branches">
+                  <div class="map-outcome map-denied">
+                    <span class="small-label">OPERATOR DENIES</span
+                    ><strong>Action blocked</strong
+                    ><span class="map-count"><b>0</b> handler entries</span>
+                  </div>
+                  <div class="map-outcome map-permitted">
+                    <span class="small-label">OPERATOR PERMITS</span
+                    ><strong>Lookup executes</strong
+                    ><span class="map-count"><b>1</b> handler entry</span>
+                  </div>
+                </div>
+                <p class="map-footnote">
+                  Same request. Different operator configuration.
+                </p>
+              </div>
               <figcaption id="gate-caption">
-                <span>Concept illustration. Not live monitoring.</span
+                <span>Synthetic illustration. Not live monitoring.</span
                 ><button
                   id="motion-toggle"
                   class="motion-toggle"
@@ -294,44 +193,51 @@
       >
         <div class="container fit-grid">
           <div>
-            <span class="section-label"
-              >01 / THE QUESTION BEFORE THE ACTION</span
-            >
+            <span class="section-label">01 / WHAT WE REVIEW</span>
             <h2 id="fit-heading">
-              A useful agent.<br />A consequential<br /><em>permission.</em>
+              One workflow.<br /><em>Three boundaries.</em>
             </h2>
-          </div>
-          <div class="fit-copy">
-            <p class="large-copy">
-              The moment an agent can read a record, send a message or change a
-              system, its execution boundaries become an engineering question.
+            <p class="fit-intro">
+              For teams connecting AI agents to business systems, APIs and cloud
+              infrastructure.
             </p>
-            <p>
-              We help teams examine that question in one existing workflow. You
-              bring the system and a specific concern; we bring a focused review
-              and inspectable evidence.
-            </p>
-            <ul class="problem-list">
-              <li><span>01</span>Which tools and resources can it reach?</li>
-              <li><span>02</span>Where are permissions actually enforced?</li>
-              <li>
-                <span>03</span>What evidence explains an allowed or denied
-                action?
-              </li>
-            </ul>
             <p class="fit-note">
-              Best fit: an authorized technical owner, relevant code or
-              configuration, and a safe way to examine one workflow.
-              <strong>Adopting X0R Core is optional.</strong>
+              <strong
+                >Your existing implementation.<br />Core adoption is
+                optional.</strong
+              >
             </p>
           </div>
+          <dl class="boundary-list">
+            <div>
+              <dt><span>01</span>Identity</dt>
+              <dd>
+                Who is making the request, and whose access is carried into the
+                action?
+              </dd>
+            </div>
+            <div>
+              <dt><span>02</span>Permission</dt>
+              <dd>
+                Which tools and resources are allowed, and where is that
+                decision enforced?
+              </dd>
+            </div>
+            <div>
+              <dt><span>03</span>Evidence</dt>
+              <dd>
+                What records explain the action, its result and the limits of
+                the review?
+              </dd>
+            </div>
+          </dl>
         </div>
       </section>
       <section class="demo-section" id="demo" aria-labelledby="demo-heading">
         <div class="container">
           <div class="section-heading">
             <div>
-              <span class="section-label">02 / EXAMINE THE BOUNDARY</span>
+              <span class="section-label">02 / INTERACTIVE DEMONSTRATION</span>
               <h2 id="demo-heading">
                 Same request.<br /><span class="blue-text"
                   >Different permission.</span
@@ -343,7 +249,7 @@
               the handler.
             </p>
           </div>
-          <div class="demo" data-state="denied">
+          <div class="demo motion" data-state="denied">
             <div class="demo-top">
               <p class="demo-label">
                 <span class="signal-dot" aria-hidden="true"></span>Interactive
@@ -375,25 +281,46 @@
                 agent,<br />but absent from the operator allowlist.
               </p>
             </div>
+            <div class="sequence-toolbar">
+              <span class="small-label">FOLLOW THE EXECUTION PATH</span
+              ><button
+                id="replay-sequence"
+                class="replay-sequence"
+                type="button"
+                hidden
+              >
+                <span aria-hidden="true">↻</span> Replay illustration
+              </button>
+            </div>
             <ol
               class="execution-path"
               aria-label="Illustrated execution sequence"
             >
               <li class="path-request">
                 <span class="step-number">01 / REQUEST</span
-                ><span class="path-symbol" aria-hidden="true">↗</span>
+                ><span class="path-symbol" aria-hidden="true"
+                  ><svg viewBox="0 0 48 48">
+                    <path
+                      d="M8 9h25v30H8zM14 17h12M14 24h9M28 31h13M36 26l5 5-5 5"
+                    /></svg
+                ></span>
                 <h3>Synthetic lookup</h3>
                 <code>knowledge_search</code>
                 <p>“How long is the synthetic warranty?”</p>
               </li>
               <li class="path-policy">
                 <span class="step-number">02 / POLICY</span
-                ><span class="path-symbol" aria-hidden="true">⋈</span>
+                ><span class="path-symbol" aria-hidden="true"
+                  ><svg viewBox="0 0 48 48">
+                    <path
+                      d="M9 6v36M39 6v36M9 12h30M9 36h30M17 24h14M26 19l5 5-5 5"
+                    /></svg
+                ></span>
                 <h3 id="decision-title">Request denied</h3>
                 <code id="decision-reason">not_granted_by_operator</code>
                 <p>
-                  The execution service checks the operator’s grant before
-                  dispatch.
+                  The operator grant is checked before the implementation is
+                  called.
                 </p>
               </li>
               <li class="path-handler">
@@ -403,7 +330,7 @@
                 >
                 <h3 id="handler-title">Handler not entered</h3>
                 <p id="handler-detail">
-                  The registered tool implementation does not execute.
+                  No call reaches the registered implementation.
                 </p>
               </li>
             </ol>
@@ -462,9 +389,9 @@
         <div class="container">
           <div class="review-intro">
             <div>
-              <span class="section-label">03 / START WITH ONE WORKFLOW</span>
+              <span class="section-label">03 / THE FOCUSED REVIEW</span>
               <h2 id="services-heading">
-                Less guesswork.<br /><em>More evidence.</em>
+                A focused review.<br /><em>A clear next step.</em>
               </h2>
               <p class="large-copy">
                 A focused security review of your existing AI workflow or API
@@ -551,10 +478,10 @@
       >
         <div class="container evidence-grid">
           <div class="evidence-copy">
-            <span class="section-label">04 / SHOW THE WORK</span>
+            <span class="section-label">04 / INSPECTABLE EVIDENCE</span>
             <h2 id="evidence-heading">
-              An observation.<br />A source.<br /><span class="blue-text"
-                >An honest limit.</span
+              Read the evidence.<br /><span class="blue-text"
+                >Know the limits.</span
               >
             </h2>
             <p>
@@ -574,7 +501,7 @@
             >
           </div>
           <article
-            class="report-preview"
+            class="report-preview reveal"
             aria-label="Sample review observations"
           >
             <div class="report-header mono">
@@ -657,7 +584,7 @@
       >
         <div class="container process-grid">
           <div>
-            <span class="section-label">05 / CONTROL THE SCOPE</span>
+            <span class="section-label">05 / HOW THE REVIEW WORKS</span>
             <h2 id="process-heading">
               Deliberate access.<br /><em>Useful answers.</em>
             </h2>
@@ -710,7 +637,7 @@
       >
         <div class="container faq-grid">
           <div>
-            <span class="section-label">06 / BEFORE WE START</span>
+            <span class="section-label">06 / COMMON QUESTIONS</span>
             <h2 id="faq-heading">A few useful<br /><em>answers.</em></h2>
           </div>
           <div class="faq">

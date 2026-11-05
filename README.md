@@ -18,9 +18,11 @@ existing `social-preview.png`.
 
 ## Design and behavior
 
-See [design direction](docs/DESIGN.md). The hero request path is a concept
-illustration with three brief animation cycles, a pause control, offscreen/tab
-visibility pausing and reduced-motion support. The diagram is static without JS.
+See [design direction](docs/DESIGN.md). The labeled hero request/policy/outcome diagram uses three brief animation
+cycles, a pause control, offscreen/tab visibility pausing and reduced-motion
+support. Native HTML labels remain readable on mobile. The demo provides short
+state-change animations and a replay button; semantic outcomes update immediately.
+A report preview has a one-time entrance. All diagrams are static without JS.
 
 The native radio controls illustrate pinned Core mock-test results; they do not
 call a backend. A polite status region announces result changes. Without JS,

@@ -7,15 +7,15 @@
     "unloadedImages": 0,
     "clippedContact": 0,
     "performance": {
-      "domContentLoadedMs": 66,
-      "loadMs": 301.8999999985099,
-      "lcpMs": 324,
+      "domContentLoadedMs": 58.600000001490116,
+      "loadMs": 109.10000000149012,
+      "lcpMs": 292,
       "cls": 0,
       "longTasks": [
-        56,
-        181
+        52,
+        150
       ],
-      "transferredBytes": 65576,
+      "transferredBytes": 78808,
       "resourceCount": 3,
       "resourceOrigins": [
         "http://127.0.0.1:8765"
@@ -31,31 +31,13 @@
               ".nav__toggle > span[aria-hidden=\"true\"]"
             ],
             [
-              "text[y=\"143\"]"
-            ],
-            [
-              "text[y=\"161\"]"
-            ],
-            [
-              "text[x=\"14\"]"
-            ],
-            [
-              "text[y=\"441\"]"
-            ],
-            [
-              "text[y=\"460\"]"
+              ".map-footnote"
             ],
             [
               ".down-link > span[aria-hidden=\"true\"]"
             ],
             [
-              ".path-request > code"
-            ],
-            [
-              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
-            ],
-            [
-              "#decision-reason"
+              "#replay-sequence > span[aria-hidden=\"true\"]"
             ],
             [
               ".report-limit > span[aria-hidden=\"true\"]"
@@ -63,7 +45,7 @@
           ]
         }
       ],
-      "passes": 30
+      "passes": 29
     },
     "consoleErrors": [],
     "sourceURL": "http://127.0.0.1:8765/",
@@ -81,14 +63,14 @@
     "unloadedImages": 0,
     "clippedContact": 0,
     "performance": {
-      "domContentLoadedMs": 66.30000000447035,
-      "loadMs": 99.60000000149012,
-      "lcpMs": 216,
+      "domContentLoadedMs": 63.100000001490116,
+      "loadMs": 100.30000000447035,
+      "lcpMs": 224,
       "cls": 0,
       "longTasks": [
-        85
+        91
       ],
-      "transferredBytes": 65576,
+      "transferredBytes": 78808,
       "resourceCount": 3,
       "resourceOrigins": [
         "http://127.0.0.1:8765"
@@ -104,25 +86,13 @@
               ".nav__toggle > span[aria-hidden=\"true\"]"
             ],
             [
-              "text[y=\"143\"]"
-            ],
-            [
-              "text[y=\"161\"]"
-            ],
-            [
-              "text[x=\"14\"]"
-            ],
-            [
-              "text[y=\"441\"]"
-            ],
-            [
-              "text[y=\"460\"]"
+              ".map-footnote"
             ],
             [
               ".down-link > span[aria-hidden=\"true\"]"
             ],
             [
-              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+              "#replay-sequence > span[aria-hidden=\"true\"]"
             ],
             [
               ".report-limit > span[aria-hidden=\"true\"]"
@@ -130,7 +100,7 @@
           ]
         }
       ],
-      "passes": 30
+      "passes": 29
     },
     "consoleErrors": [],
     "sourceURL": "http://127.0.0.1:8765/",
@@ -148,14 +118,14 @@
     "unloadedImages": 0,
     "clippedContact": 0,
     "performance": {
-      "domContentLoadedMs": 59,
-      "loadMs": 90.39999999850988,
-      "lcpMs": 216,
+      "domContentLoadedMs": 51.100000001490116,
+      "loadMs": 85,
+      "lcpMs": 196,
       "cls": 0,
       "longTasks": [
-        98
+        80
       ],
-      "transferredBytes": 65576,
+      "transferredBytes": 78808,
       "resourceCount": 3,
       "resourceOrigins": [
         "http://127.0.0.1:8765"
@@ -171,25 +141,13 @@
               ".nav__toggle > span[aria-hidden=\"true\"]"
             ],
             [
-              "text[y=\"143\"]"
-            ],
-            [
-              "text[y=\"161\"]"
-            ],
-            [
-              "text[x=\"14\"]"
-            ],
-            [
-              "text[y=\"441\"]"
-            ],
-            [
-              "text[y=\"460\"]"
+              ".map-footnote"
             ],
             [
               ".down-link > span[aria-hidden=\"true\"]"
             ],
             [
-              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+              "#replay-sequence > span[aria-hidden=\"true\"]"
             ],
             [
               ".report-limit > span[aria-hidden=\"true\"]"
@@ -197,7 +155,7 @@
           ]
         }
       ],
-      "passes": 30
+      "passes": 29
     },
     "consoleErrors": [],
     "sourceURL": "http://127.0.0.1:8765/",
@@ -215,14 +173,14 @@
     "unloadedImages": 0,
     "clippedContact": 0,
     "performance": {
-      "domContentLoadedMs": 75.5,
-      "loadMs": 111.69999999552965,
-      "lcpMs": 252,
+      "domContentLoadedMs": 61.100000001490116,
+      "loadMs": 96,
+      "lcpMs": 212,
       "cls": 0,
       "longTasks": [
-        106
+        88
       ],
-      "transferredBytes": 65576,
+      "transferredBytes": 78808,
       "resourceCount": 3,
       "resourceOrigins": [
         "http://127.0.0.1:8765"
@@ -238,25 +196,13 @@
               ".nav__toggle > span[aria-hidden=\"true\"]"
             ],
             [
-              "text[y=\"143\"]"
-            ],
-            [
-              "text[y=\"161\"]"
-            ],
-            [
-              "text[x=\"14\"]"
-            ],
-            [
-              "text[y=\"441\"]"
-            ],
-            [
-              "text[y=\"460\"]"
+              ".map-footnote"
             ],
             [
               ".down-link > span[aria-hidden=\"true\"]"
             ],
             [
-              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+              "#replay-sequence > span[aria-hidden=\"true\"]"
             ],
             [
               ".report-limit > span[aria-hidden=\"true\"]"
@@ -264,7 +210,7 @@
           ]
         }
       ],
-      "passes": 30
+      "passes": 29
     },
     "consoleErrors": [],
     "sourceURL": "http://127.0.0.1:8765/",
@@ -282,14 +228,15 @@
     "unloadedImages": 0,
     "clippedContact": 0,
     "performance": {
-      "domContentLoadedMs": 48.600000001490116,
-      "loadMs": 85,
-      "lcpMs": 200,
+      "domContentLoadedMs": 59.600000001490116,
+      "loadMs": 255.60000000149012,
+      "lcpMs": 300,
       "cls": 0,
       "longTasks": [
-        84
+        54,
+        144
       ],
-      "transferredBytes": 65576,
+      "transferredBytes": 78808,
       "resourceCount": 3,
       "resourceOrigins": [
         "http://127.0.0.1:8765"
@@ -305,31 +252,13 @@
               ".nav__toggle > span[aria-hidden=\"true\"]"
             ],
             [
-              "text[y=\"143\"]"
-            ],
-            [
-              "text[y=\"161\"]"
-            ],
-            [
-              "text[x=\"14\"]"
-            ],
-            [
-              "text[y=\"441\"]"
-            ],
-            [
-              "text[y=\"460\"]"
+              ".map-footnote"
             ],
             [
               ".down-link > span[aria-hidden=\"true\"]"
             ],
             [
-              ".path-request > .step-number"
-            ],
-            [
-              ".path-policy > .step-number"
-            ],
-            [
-              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+              "#replay-sequence > span[aria-hidden=\"true\"]"
             ],
             [
               ".report-limit > span[aria-hidden=\"true\"]"
@@ -337,7 +266,7 @@
           ]
         }
       ],
-      "passes": 30
+      "passes": 29
     },
     "consoleErrors": [],
     "sourceURL": "http://127.0.0.1:8765/",
@@ -355,14 +284,14 @@
     "unloadedImages": 0,
     "clippedContact": 0,
     "performance": {
-      "domContentLoadedMs": 51.900000005960464,
-      "loadMs": 86.70000000298023,
-      "lcpMs": 220,
+      "domContentLoadedMs": 60.600000001490116,
+      "loadMs": 103,
+      "lcpMs": 292,
       "cls": 0,
       "longTasks": [
-        90
+        129
       ],
-      "transferredBytes": 65576,
+      "transferredBytes": 78808,
       "resourceCount": 3,
       "resourceOrigins": [
         "http://127.0.0.1:8765"
@@ -375,31 +304,13 @@
           "id": "color-contrast",
           "nodes": [
             [
-              "text[y=\"143\"]"
-            ],
-            [
-              "text[y=\"161\"]"
-            ],
-            [
-              "text[x=\"14\"]"
-            ],
-            [
-              "text[y=\"441\"]"
-            ],
-            [
-              "text[y=\"460\"]"
+              ".map-footnote"
             ],
             [
               ".down-link > span[aria-hidden=\"true\"]"
             ],
             [
-              ".path-request > .step-number"
-            ],
-            [
-              ".path-policy > .step-number"
-            ],
-            [
-              ".path-policy > .path-symbol[aria-hidden=\"true\"]"
+              "#replay-sequence > span[aria-hidden=\"true\"]"
             ],
             [
               ".report-limit > span[aria-hidden=\"true\"]"
@@ -407,7 +318,7 @@
           ]
         }
       ],
-      "passes": 30
+      "passes": 29
     },
     "consoleErrors": [],
     "sourceURL": "http://127.0.0.1:8765/",
