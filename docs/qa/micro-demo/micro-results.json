@@ -1,0 +1,48 @@
+{
+  "responsive": [
+    {
+      "width": 320,
+      "fourScenes": "passed",
+      "keyboard": "passed",
+      "playPauseEnd": "passed",
+      "consoleErrors": []
+    },
+    {
+      "width": 375,
+      "fourScenes": "passed",
+      "keyboard": "passed",
+      "playPauseEnd": "passed",
+      "consoleErrors": []
+    },
+    {
+      "width": 390,
+      "fourScenes": "passed",
+      "keyboard": "passed",
+      "playPauseEnd": "passed",
+      "consoleErrors": []
+    },
+    {
+      "width": 430,
+      "fourScenes": "passed",
+      "keyboard": "passed",
+      "playPauseEnd": "passed",
+      "consoleErrors": []
+    },
+    {
+      "width": 768,
+      "fourScenes": "passed",
+      "keyboard": "passed",
+      "playPauseEnd": "passed",
+      "consoleErrors": []
+    },
+    {
+      "width": 1280,
+      "fourScenes": "passed",
+      "keyboard": "passed",
+      "playPauseEnd": "passed",
+      "consoleErrors": []
+    }
+  ],
+  "reducedMotion": "passed",
+  "noJavaScript": "passed"
+}

@@ -26,10 +26,13 @@ jobs:
       - name: Check and serve
         run: |
           node --check site.js
+          node --check micro-demo.js
           git diff --check
           python -m http.server 8765 --bind 127.0.0.1 > /tmp/x0r-preview.log 2>&1 &
       - name: Responsive, interaction and accessibility checks
-        run: python qa/check_site.py
+        run: |
+          python qa/check_site.py
+          python qa/check_micro_demo.py
         env:
           X0R_QA_URL: http://127.0.0.1:8765/
           AXE_PATH: /tmp/x0r-axe/package/axe.min.js
