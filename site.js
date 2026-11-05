@@ -30,6 +30,18 @@
   const setText = (id, text) => {
     document.getElementById(id).textContent = text;
   };
+  const replay = document.querySelector("#replay-sequence");
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+  const replaySequence = () => {
+    if (reduced.matches || document.documentElement.dataset.motion === "paused")
+      return;
+    demo.classList.remove("is-running");
+    // One intentional layout flush restarts a short user-triggered CSS sequence.
+    void demo.offsetWidth;
+    demo.classList.add("is-running");
+  };
+  replay.hidden = false;
+  replay.addEventListener("click", replaySequence);
   controls.disabled = false;
   controls.addEventListener("change", (event) => {
     if (event.target.name !== "policy") return;
@@ -59,7 +71,7 @@
       "handler-detail",
       permitted
         ? "The lookup executes. The synthetic answer contains “24 months”."
-        : "The registered tool implementation does not execute.",
+        : "No call reaches the registered implementation.",
     );
     setText("status-badge", permitted ? "succeeded" : "blocked");
     setText(
@@ -68,17 +80,24 @@
         ? "Permitted request · 1 handler entry · 1 tool execution step"
         : "Denied request · 0 handler entries · 0 tool execution steps",
     );
+    replaySequence();
   });
-  const motion = document.querySelector(".motion");
   const motionToggle = document.querySelector("#motion-toggle");
-  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   let paused = false;
-  let visible = false;
+  const visible = new Map();
+  const motions = [...document.querySelectorAll(".motion")];
   const updateMotion = () => {
-    motion.classList.toggle(
-      "is-paused",
-      paused || document.hidden || !visible || reduced.matches,
+    document.documentElement.dataset.visibility = document.hidden
+      ? "hidden"
+      : "visible";
+    motions.forEach((element) =>
+      element.classList.toggle(
+        "is-paused",
+        paused || document.hidden || !visible.get(element) || reduced.matches,
+      ),
     );
+    if (reduced.matches) demo.classList.remove("is-running");
+    replay.hidden = reduced.matches;
     motionToggle.hidden = reduced.matches;
     document.documentElement.dataset.motion = paused ? "paused" : "playing";
   };
@@ -91,13 +110,28 @@
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
       (entries) => {
-        visible = entries[0].isIntersecting;
-        motion.classList.add("is-active");
+        entries.forEach((entry) => {
+          visible.set(entry.target, entry.isIntersecting);
+          entry.target.classList.add("is-active");
+        });
         updateMotion();
       },
       { threshold: 0.15 },
     );
-    observer.observe(motion);
+    motions.forEach((element) => observer.observe(element));
+    const revealObserver = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed");
+            revealObserver.unobserve(entry.target);
+          }
+        }),
+      { threshold: 0.15 },
+    );
+    document
+      .querySelectorAll(".reveal")
+      .forEach((element) => revealObserver.observe(element));
   }
   document.addEventListener("visibilitychange", updateMotion);
   reduced.addEventListener("change", updateMotion);

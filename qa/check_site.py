@@ -59,13 +59,15 @@ with sync_playwright() as p:
             resourceCount:r.length,resourceOrigins:[...new Set(r.map(e=>new URL(e.name).origin))]};
         }''')
         assert report['performance']['resourceOrigins'] == [page.evaluate('location.origin')]
+        if width in (320, 390, 1280):
+            page.screenshot(path=str(OUT / f'hero-{width}.png'))
         page.keyboard.press('Tab')
         assert page.get_by_role('link',name='Skip to content').evaluate('e=>document.activeElement===e')
         page.keyboard.press('Enter')
         assert page.locator('#main').evaluate('e=>document.activeElement===e')
         assert page.locator('h1').count() == 1
         assert page.locator('link[rel=canonical]').get_attribute('href') == 'https://x0r-labs.github.io/site/'
-        assert page.get_by_role('heading', name='Agents act. Boundaries matter.').is_visible()
+        assert page.get_by_role('heading', name='Agent access. Under review.').is_visible()
         for price in ('$350', '$1,000', '$250'):
             assert price in page.locator('#services').inner_text()
         # Every shipped asset is fetched under the same base path, including /site/ live.
@@ -85,6 +87,8 @@ with sync_playwright() as p:
             assert toggle.evaluate('e=>document.activeElement===e')
         else:
             assert not toggle.is_visible() and nav.is_visible()
+        page.locator('.hero-actions .btn').click()
+        page.wait_for_function('''() => {const h=document.querySelector('#services-heading').getBoundingClientRect(),n=document.querySelector('header').getBoundingClientRect();return h.top>=n.bottom && h.top<innerHeight}''')
         denied = page.get_by_role('radio', name='Denied', exact=True)
         permitted = page.get_by_role('radio', name='Permitted', exact=True)
         denied.focus()
@@ -94,7 +98,11 @@ with sync_playwright() as p:
         assert page.locator('#entry-count').inner_text() == '1'
         assert page.locator('#status-badge').inner_text() == 'succeeded'
         assert page.locator('#decision-reason').inner_text() == 'granted'
+        page.locator('#replay-sequence').click()
+        assert page.locator('.demo').evaluate('e=>e.classList.contains("is-running")')
+        assert page.locator('#status-badge').inner_text() == 'succeeded'
         assert '24 months' in page.locator('#handler-detail').inner_text()
+        permitted.focus()
         page.keyboard.press('ArrowLeft')
         assert denied.is_checked()
         assert page.locator('#entry-count').inner_text() == '0'
@@ -109,10 +117,9 @@ with sync_playwright() as p:
         assert page.get_by_role('link', name='Start a conversation on LinkedIn').get_attribute('href') == 'https://www.linkedin.com/company/x0r-labs/'
         assert page.locator('form').count() == 0
         # Browser viewport screenshot plus section crops for direct visual inspection.
-        page.evaluate('scrollTo(0,0)')
-        page.screenshot(path=str(OUT / f'after-{width}.png'), full_page=True)
+        page.evaluate('scrollTo({top:0,behavior:"instant"})')
+        page.screenshot(path=str(OUT / f'after-{width}.png'), full_page=True, style='.site-header{position:relative!important}')
         if width in (320, 390, 1280):
-            page.screenshot(path=str(OUT / f'hero-{width}.png'))
             for name, selector in [('demo','.demo'), ('pricing','.review-intro'), ('contact','.cta')]:
                 page.locator(selector).screenshot(path=str(OUT / f'{name}-{width}.png'))
             permitted.check()
@@ -154,6 +161,7 @@ with sync_playwright() as p:
     page.goto(URL, wait_until='networkidle')
     assert page.locator('.request-packet').evaluate('e=>getComputedStyle(e).animationName') == 'none'
     assert not page.locator('#motion-toggle').is_visible()
+    assert not page.locator('#replay-sequence').is_visible()
     page.get_by_role('radio',name='Permitted',exact=True).check()
     assert page.locator('#status-badge').inner_text() == 'succeeded'
     context.close()
@@ -169,7 +177,7 @@ with sync_playwright() as p:
     pause.click()
     page.locator('#contact').scroll_into_view_if_needed()
     page.wait_for_function('document.querySelector(".motion").classList.contains("is-paused")')
-    page.evaluate('scrollTo(0,0)')
+    page.evaluate('scrollTo({top:0,behavior:"instant"})')
     page.wait_for_function('!document.querySelector(".motion").classList.contains("is-paused")')
     # Synthetic visibility event tests the hidden-tab pause handler; not OS lifecycle emulation.
     page.evaluate('Object.defineProperty(document,"hidden",{configurable:true,get:()=>true});document.dispatchEvent(new Event("visibilitychange"))')
