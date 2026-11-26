@@ -1,0 +1,249 @@
+/* Investor brief page. Builds on styles.css; no external fonts or scripts. */
+.ir-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 96px;
+  border-bottom: 1px solid var(--line);
+}
+.ir-tag {
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+
+.ir-hero {
+  padding: 110px 0 120px;
+}
+.ir-hero h1 {
+  font-size: clamp(3rem, 8vw, 6.4rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  margin-top: 36px;
+}
+.ir-hero h1 span {
+  color: var(--bright);
+}
+.ir-lead {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  margin-top: 40px;
+}
+.ir-lead span {
+  color: var(--muted);
+}
+.ir-support {
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+.ir-section {
+  padding: 110px 0;
+  border-top: 1px solid var(--line);
+}
+.ir-alt {
+  background: #0b1220;
+}
+.ir-section h2 em {
+  color: var(--bright);
+}
+
+.ir-cols {
+  list-style: none;
+  padding: 0;
+  margin: 64px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+}
+.ir-cols > li {
+  padding: 36px 40px 0 0;
+}
+.ir-cols > li + li {
+  padding-left: 40px;
+  border-left: 1px solid var(--line);
+}
+.ir-cols h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+.ir-cols p {
+  color: var(--muted);
+}
+.ir-num {
+  display: block;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--bright);
+  margin-bottom: 20px;
+}
+.ir-eg {
+  display: block;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--cyan);
+  margin-top: 24px;
+}
+
+/* Roadmap: the current stage carries the brand blue. */
+.ir-stages {
+  border-top: none;
+}
+.ir-stages > li {
+  border-top: 4px solid var(--line);
+}
+.ir-stages > li.is-now {
+  border-top-color: var(--blue);
+}
+.ir-stages > li.is-now .ir-num {
+  color: var(--cyan);
+}
+.ir-closer {
+  margin-top: 64px;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+.ir-closer b {
+  color: #f6f7fb;
+}
+
+.ir-offer {
+  margin-top: 72px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #0e172a;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  padding: 28px 36px;
+}
+.ir-offer .small-label {
+  color: var(--cyan);
+  flex: none;
+  width: 140px;
+}
+.ir-offer p {
+  flex: 1;
+  font-size: 1.1rem;
+}
+.ir-price {
+  flex: none;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 24px;
+}
+.ir-price:hover {
+  background: #2547de;
+}
+
+.ir-figs .ir-big {
+  display: block;
+  font-size: clamp(3.2rem, 6vw, 5.2rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--bright);
+  margin-bottom: 14px;
+}
+.ir-figs b {
+  color: #f6f7fb;
+  font-weight: 600;
+}
+.ir-figs a {
+  color: #f6f7fb;
+  border-bottom: 1px solid currentColor;
+}
+.ir-figs a:hover {
+  color: var(--cyan);
+}
+
+.ir-ask {
+  background: var(--blue);
+  padding: 90px 0;
+}
+.ir-ask-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+.ir-ask .small-label {
+  color: #e4eaff;
+  margin-bottom: 20px;
+}
+.ir-ask p {
+  color: #e8edff;
+  margin-top: 16px;
+  font-size: 1.1rem;
+}
+.ir-btn {
+  background: #fff;
+  color: var(--ink);
+  flex: none;
+}
+.ir-btn:hover {
+  background: #e4eaff;
+}
+.ir-ask :focus-visible {
+  outline-color: #fff;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ir-cols > li {
+    animation: ir-rise 0.5s ease-out both;
+  }
+  .ir-cols > li:nth-child(2) {
+    animation-delay: 0.12s;
+  }
+  .ir-cols > li:nth-child(3) {
+    animation-delay: 0.24s;
+  }
+}
+@keyframes ir-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@media (max-width: 960px) {
+  .ir-cols {
+    grid-template-columns: 1fr;
+  }
+  .ir-cols > li,
+  .ir-cols > li + li {
+    padding: 28px 0 32px;
+    border-left: none;
+  }
+  .ir-cols > li + li {
+    border-top: 1px solid var(--line);
+  }
+  .ir-stages > li + li {
+    border-top-width: 4px;
+  }
+  .ir-offer,
+  .ir-ask-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .ir-offer .small-label {
+    width: auto;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+  .ir-tag {
+    display: none;
+  }
+  .ir-hero {
+    padding: 70px 0 80px;
+  }
+  .ir-section {
+    padding: 72px 0;
+  }
+}
